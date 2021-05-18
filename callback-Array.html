@@ -1,0 +1,20 @@
+<script>
+
+const payments = [
+    { amount: 100.00, currency: "USD" },
+    { amount: 50.00,  currency: "EUR" },
+    { amount: 10.00,  currency: "USD" },
+    { amount: 25.00,  currency: "EUR" },
+    { amount: 5.00,   currency: "USD" },
+      ]
+
+    
+    let value = payments.filter(value => value.currency == "USD")
+    console.log("I.", value)
+
+    value.forEach( sum => console.log("II.", sum.amount))
+
+    let sum = value.reduce((accumulator, currentValue) => accumulator + currentValue.amount, 0)
+    console.log("III.", sum)
+
+</script>
